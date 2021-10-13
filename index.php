@@ -11,8 +11,8 @@ use Carbon\Carbon;
 
 // connect to dabase
 try {
-    $dsn = 'mysql:host=127.0.0.1;port=33060;dbname=lara_0804_p;charset='.DB_CHARSET;
-    $pdo = new PDO($dsn, 'root', 'root');
+    $dsn = 'mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_DATABASE.';charset='.DB_CHARSET;
+    $pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
 } catch (PDOException $e) {
     echo  "Error: ".$e->getMessage()."＜br/＞";
     die();
